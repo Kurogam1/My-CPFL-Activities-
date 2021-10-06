@@ -1,3 +1,6 @@
+//Name: Kyle Christian T. Novillos
+//Activity Description: Write a C++ payroll program that prompts the user for a name, employee number, date of payday, hourly pay rate, and number of hours worked.
+//Date: October 6, 2021
 #include <iostream>
 #include <string>
 #include <iomanip>
@@ -14,9 +17,9 @@ int main(void)
     cout << "Enter Name                   : ";
         getline(cin,Name);
     cout << "Enter Employee ID            : ";
-        cin >> EmployeeNum;
+        getline(cin,EmployeeNum);
     cout << "Date of Payday               : ";
-        cin >> DoP;
+        getline(cin,DoP);
 start:
     cout << "Enter Number of Hours Worked : ";
         cin >> nHours;
