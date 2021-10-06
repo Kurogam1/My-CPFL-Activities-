@@ -9,10 +9,10 @@ int main(void)
 {
 
     string EmployeeNum, Name, DoP, status;
-    int nHours, pHealth = 150, SSS = 250, pIbig = 200; 
-    double Hourlypr, grossp, netp, wTax; 
+    int nHours; 
+    double Hourlypr, grossp, netp, wTax, pHealth = 150, SSS = 250, pIbig = 200; 
     cout << "Enter Name                   : ";
-        cin >> Name;
+        getline(cin,Name);
     cout << "Enter Employee ID            : ";
         cin >> EmployeeNum;
     cout << "Date of Payday               : ";
@@ -22,18 +22,19 @@ start:
         cin >> nHours;
     cout << "Enter Hourly Pay Rate        : ";
         cin >> Hourlypr;
-
+    cout << endl << "\n";
+    
      grossp = Hourlypr * nHours;
     if(nHours == 0 || Hourlypr == 0)
     {
         cout << "You did not input Anything.\n";
         goto start;
     }
-    if(netp < 5000)
+    if(netp > 5000)
     {
         status = "Contractual ";
     } 
-    else if((netp = 5001)&&(netp >= 10000))
+    else if((netp = 5000)&&(netp >= 10000))
     {
         status = "Probationary ";
     }
